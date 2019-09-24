@@ -5,7 +5,7 @@ Sistema de login em PHP e Javascript
 Iniciando a aula.
 
 # aula01 - 23/09/2019
-Começou a Primavera :sunflower: 
+Começou a Primavera 🌻 
 Aula inicial, configuração do projeto GitHub.
 E criação do passo a passo.
 
