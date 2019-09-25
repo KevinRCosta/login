@@ -23,14 +23,14 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        Alo Ha Tchurma 
+                        Alo Ha Tchurma
                     </strong>
                 </div>
             </div>
         </section>
         <!-- Formulário de login -->
         <section class="row">
-            <div class="col-lg-4 offset-lg-4 bg-light rouded" id="caixaLogin">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin">
                 <h2 class="text-center mt-2">
                     Entrar no sitema
                 </h2>
@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control">
                     </div>
-                
+
                     <div class="form-group">
                         <input type="password" name="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control">
                     </div>
@@ -70,6 +70,41 @@
                 </form>
             </div>
         </section>
+        <!-- Final da Seção de Login -->
+
+        <!-- Formulário de Recuperação de Senha -->
+        <section class="row mt-5">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaLogin">
+                <h2 class="text-center mt-2">
+                    Gerar Nova Senha.
+                </h2>
+                <form action="#" method="post" id="formSenha" class="p-2">
+                    <div class="form-group">
+                        <small class="text-muted">
+                            Para gerar uma nova senha, digite o seu e-mail. Clique no link gerado.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="emailGerarSenha" id="emailGerarSenha" class="form-control" placeholder="E-mail de recuperação de senha">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value=" : : Gerar : :" name="btnGerar" id="btnGerar" class="btn btn-primary btn-block">
+                    </div>
+
+                    <div class="form-group">
+                        <p class="text-center">
+                            Já registrado?  <a href="#" id="btnJaRegistrado">
+                                Entrar por aqui.
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Fim da Seção de Recuperação de Senha -->
+
     </main>
 
     <!-- Optional JavaScript -->
