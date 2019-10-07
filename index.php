@@ -217,6 +217,27 @@
             $("#caixaRegistro").hide();
             $("#caixaLogin").show();
         });
+        //Cadastro de novo usuário
+        $("#btnRegistrar").click(function(e) {
+            if (document.querySelector("#formRegistro").checkValidity()) {
+                e.preventDefault();//Não abrir outra página
+                //Envio dos dados via Ajax
+                $.ajax({
+                    url:'recebe_dados.php',
+                    method: 'post',
+                    data: $("#formRegistro").serialize()+'&action=cadastro',
+                    success: function(resposta){
+                        $("#alerta").show();
+                        $(".resultado").html(resposta);
+                    }
+                });
+            }
+            return true;
+        });
+        //Login
+        $("#btnEntrar").click(function(e) {});
+        //Recuperação de senha
+        $("#btnGerar").click(function(e) {});
 
         /*
             Translated
