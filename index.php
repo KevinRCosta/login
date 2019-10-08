@@ -220,13 +220,13 @@
         //Cadastro de novo usuário
         $("#btnRegistrar").click(function(e) {
             if (document.querySelector("#formRegistro").checkValidity()) {
-                e.preventDefault();//Não abrir outra página
+                e.preventDefault(); //Não abrir outra página
                 //Envio dos dados via Ajax
                 $.ajax({
-                    url:'recebe_dados.php',
+                    url: 'recebe_dados.php',
                     method: 'post',
-                    data: $("#formRegistro").serialize()+'&action=cadastro',
-                    success: function(resposta){
+                    data: $("#formRegistro").serialize() + '&action=cadastro',
+                    success: function(resposta) {
                         $("#alerta").show();
                         $(".resultado").html(resposta);
                     }
@@ -235,9 +235,39 @@
             return true;
         });
         //Login
-        $("#btnEntrar").click(function(e) {});
+        $("#btnEntrar").click(function(e) {
+            if (document.querySelector("#formLogin").checkValidity()) {
+                e.preventDefault(); //Não abrir outra página
+                //Envio dos dados via Ajax
+                $.ajax({
+                    url: 'recebe_dados.php',
+                    method: 'post',
+                    data: $("#formLogin").serialize() + '&action=login',
+                    success: function(resposta) {
+                        $("#alerta").show();
+                        $(".resultado").html(resposta);
+                    }
+                });
+            }
+            return true;
+        });
         //Recuperação de senha
-        $("#btnGerar").click(function(e) {});
+        $("#btnGerar").click(function(e) {
+            if (document.querySelector("#formSenha").checkValidity()) {
+                e.preventDefault(); //Não abrir outra página
+                //Envio dos dados via Ajax
+                $.ajax({
+                    url: 'recebe_dados.php',
+                    method: 'post',
+                    data: $("#formSenha").serialize() + '&action=senha',
+                    success: function(resposta) {
+                        $("#alerta").show();
+                        $(".resultado").html(resposta);
+                    }
+                });
+            }
+            return true;
+        });
 
         /*
             Translated
