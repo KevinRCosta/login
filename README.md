@@ -1,6 +1,8 @@
 # login
 Sistema de login em PHP e Javascript
 
+# aula 07 - 18/10/2019
+
 # aula 06 - 15/10/2019
 Persistência de dados no banco de dados
 
