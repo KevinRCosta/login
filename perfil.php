@@ -1,3 +1,7 @@
+<?php
+require_once "session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,12 +35,12 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Perfil
+                        <?=$nomeDoUsuario?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
                         <a class="dropdown-item" href="#">Fotos</a>
-                        <a class="dropdown-item" href="#">Sair</a>
+                        <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -48,13 +52,16 @@
             <h1 class="display-4">Boas vindas</h1>
 
             <h2 class="display-2 text-center bg-info rounded p-1 text-light">
-                Nome completo
+                <?=$nomeCompleto?>
             </h2>
             <h2 class="text-center">
-                E-mail do usuário: qualquercoisa@mail.com
+                E-mail do usuário:
+                <a href="mailto:<?=$email?>">
+                    <?=$email?>
+                </a>
             </h2>
             <h2 class="text-center">
-                Registrado em: 18/10/2019
+                Registrado em: <?=$dataCriado?>
             </h2>
         </div>
     </div>
