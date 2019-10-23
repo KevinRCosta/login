@@ -16,6 +16,8 @@ if (isset($_SESSION['nomeDoUsuario'])) {
     $email = $linha['emailUsuario'];
     $dataCriado = $linha['dataCriado'];
 
+    $dataCriado = date('d/m/Y', strtotime($dataCriado));
+
 } else {
     //Se não, voltar index
     header("location: index.php");
