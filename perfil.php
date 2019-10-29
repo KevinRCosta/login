@@ -1,7 +1,3 @@
-<?php
-require_once "session.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,7 +35,7 @@ require_once "session.php";
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
-                        <a class="dropdown-item" href="#">Fotos</a>
+                        <a class="dropdown-item" href="fotos.php">Fotos</a>
                         <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
                 </li>
@@ -49,23 +45,17 @@ require_once "session.php";
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-
-            <img src="<?= $cadastroUrl ?>" width=" 200" height="200" class="rounded mx-auto d-block" alt="Imagem do Perfil">
-
             <h1 class="display-4">Boas vindas</h1>
-
-            <h2 class="display-2 text-center bg-info rounded p-1 text-light">
-                <?= $nomeCompleto ?>
-            </h2>
-            <h2 class="text-center">
-                E-mail do usuário:
-                <a href="mailto:<?= $email ?>">
-                    <?= $email ?>
-                </a>
-            </h2>
-            <h2 class="text-center">
-                Registrado em: <?= $dataCriado ?>
-            </h2>
+            <h2 class="display-2 text-center bg-info text-light rounded p-2"><?= $nomeCompleto ?></h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="<?= $cadastroUrl ?>" width="400px" alt="foto">
+                </div>
+                <div class="col-8">
+                    <h2 class="text-center">E-mail do Usuário: <a href="mailto:<?= $email?>"><?= $email ?></a></h2>
+                    <h2 class="text-center">Registrado em: <?= $dataCriado ?></h2>
+                </div>
+            </div>
         </div>
     </div>
 
