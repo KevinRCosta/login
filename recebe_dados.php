@@ -25,6 +25,7 @@ if(isset($_POST['action'])){
         $emailUsuario = verificar_entrada($_POST['emailUsuario']);
         $senhaDoUsuario = verificar_entrada($_POST['senhaDoUsuario']);
         $senhaUsuarioConfirmar = verificar_entrada($_POST['senhaUsuarioConfirmar']);
+        $cadastroUrl = verificar_entrada($_POST['cadastroUrl']);
 
         $dataCriado = date("Y-m-d"); //Data atual no formato de Banco de dados
 

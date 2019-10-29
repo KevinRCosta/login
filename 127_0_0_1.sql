@@ -37,7 +37,7 @@ CREATE TABLE `usuario` (
   `nomeDoUsuario` varchar(45) NOT NULL,
   `emailUsuario` varchar(45) NOT NULL,
   `senhaDoUsuario` char(40) NOT NULL,
-  `dataCriado` date NOT NULL
+  `dataCriado` date NOT NULL,
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 COMMIT;
 

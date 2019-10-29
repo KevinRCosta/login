@@ -149,6 +149,10 @@
                         <input type="password" name="senhaUsuarioConfirmar" id="senhaUsuarioConfirmar" class="form-control" placeholder="Confirme sua senha" required minlength="6">
                     </div>
 
+                    <div class="form-group">
+                        <input type="url" name="cadastroUrl" id="cadastroUrl" class="form-control" placeholder="Insira uma URL para imagem de perfil" required>
+                    </div>
+
                     <div class="form-group mt-4">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" name="concordar" id="concordar" class="custom-control-input">
@@ -230,17 +234,17 @@
                                 Lembrar de mim.
                             </label>
 
-                    <div class="form-group">
-                        <input type="submit" value=": : Enviar : :" name="btnEnviar" id="btnEnviar" class="btn btn-primary btn-block">
-                    </div>
+                            <div class="form-group">
+                                <input type="submit" value=": : Enviar : :" name="btnEnviar" id="btnEnviar" class="btn btn-primary btn-block">
+                            </div>
 
-                    <div class="form-group">
-                        <p class="text-center">
-                            Já registrado? <a href="#" id="btnJaRegistrado3">
-                                Entrar por aqui.
-                            </a>
-                        </p>
-                    </div>
+                            <div class="form-group">
+                                <p class="text-center">
+                                    Já registrado? <a href="#" id="btnJaRegistrado3">
+                                        Entrar por aqui.
+                                    </a>
+                                </p>
+                            </div>
                 </form>
             </div>
         </section>

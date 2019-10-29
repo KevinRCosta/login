@@ -15,6 +15,7 @@ if (isset($_SESSION['nomeDoUsuario'])) {
     $nomeCompleto = $linha['nomeCompleto'];
     $email = $linha['emailUsuario'];
     $dataCriado = $linha['dataCriado'];
+    $cadastroUrl = $linha['cadastroUrl'];
 
     $dataCriado = date('d/m/Y', strtotime($dataCriado));
 
