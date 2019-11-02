@@ -1,3 +1,7 @@
+<?php
+require_once "session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -52,7 +56,12 @@
                     <img src="<?= $cadastroUrl ?>" width="400px" alt="foto">
                 </div>
                 <div class="col-8">
-                    <h2 class="text-center">E-mail do Usuário: <a href="mailto:<?= $email?>"><?= $email ?></a></h2>
+                    <h2 class="text-center">
+                        E-mail do Usuário:
+                        <a href="mailto:<?= $email ?>">
+                            <?= $email ?>
+                        </a>
+                    </h2>
                     <h2 class="text-center">Registrado em: <?= $dataCriado ?></h2>
                 </div>
             </div>
