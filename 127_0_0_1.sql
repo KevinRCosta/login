@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Nov-2019 às 22:29
+-- Tempo de geração: 18-Nov-2019 às 21:14
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -39,15 +39,17 @@ CREATE TABLE `usuario` (
   `emailUsuario` varchar(45) NOT NULL,
   `senhaDoUsuario` char(40) NOT NULL,
   `dataCriado` date NOT NULL,
-  `cadastroUrl` varchar(200) NOT NULL
+  `cadastroUrl` varchar(200) NOT NULL,
+  `token` char(10) NOT NULL,
+  `tempoDeVida` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `nomeCompleto`, `nomeDoUsuario`, `emailUsuario`, `senhaDoUsuario`, `dataCriado`, `cadastroUrl`) VALUES
-(0, 'kevin costa', 'kevin', 'uiabi@oidna.com', '624c22a8c8f8c93f18fe5ecd4713100c8d754507', '2019-11-01', 'https://media.mojang.com/blog-image/2c34ca1217c7d95e76a6f8d646adf9208f78145a/blogmcnet.png');
+INSERT INTO `usuario` (`idUsuario`, `nomeCompleto`, `nomeDoUsuario`, `emailUsuario`, `senhaDoUsuario`, `dataCriado`, `cadastroUrl`, `token`, `tempoDeVida`) VALUES
+(0, 'kevin costa', 'kevin', 'uiabi@oidna.com', '624c22a8c8f8c93f18fe5ecd4713100c8d754507', '2019-11-01', 'https://media.mojang.com/blog-image/2c34ca1217c7d95e76a6f8d646adf9208f78145a/blogmcnet.png', '', '2019-11-18 23:07:54');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
