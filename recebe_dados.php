@@ -121,7 +121,7 @@ if(isset($_POST['action'])){
             $sql = $connect->prepare("UPDATE usuario SET token=?, tempoDeVida=DATE_ADD(now(), INTERVAL 5 MINUTE) WHERE emailUsuario = ?");
             $sql->bind_param("ss", $token, $email);
             $sql->execute();
-            echo "Token ao banco de dados"
+            echo "Token ao banco de dados";
         }
         else{
             echo "E-mail não encontrado!";
