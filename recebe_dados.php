@@ -121,7 +121,9 @@ if(isset($_POST['action'])){
             $sql = $connect->prepare("UPDATE usuario SET token=?, tempoDeVida=DATE_ADD(now(), INTERVAL 5 MINUTE) WHERE emailUsuario = ?");
             $sql->bind_param("ss", $token, $email);
             $sql->execute();
-            echo "Token ao banco de dados";
+            //echo "Token ao banco de dados";
+            $link = "<a href='gerarSenha.php?email=$email&token=$token'>Clique aqui para Gerar Nova Senha</a>";
+            echo $link; //Este link deve ser enviado por email
         }
         else{
             echo "E-mail não encontrado!";
